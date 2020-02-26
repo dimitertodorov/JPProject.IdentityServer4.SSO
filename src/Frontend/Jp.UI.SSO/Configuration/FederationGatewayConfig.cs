@@ -58,11 +58,11 @@ namespace Jp.UI.SSO.Configuration
             {
                 authBuilder.AddOpenIdConnect("AzureAD", "AzureAD", options =>
                 {
-                    
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
                     options.ClientId = configuration.GetValue<string>("ExternalLogin:AzureAD:ClientId");
                     options.Authority = configuration.GetValue<string>("ExternalLogin:AzureAD:Authority");
                     options.MetadataAddress = configuration.GetValue<string>("ExternalLogin:AzureAD:MetadataAddress");
+                    options.CallbackPath = configuration.GetValue<string>("ExternalLogin:AzureAD:CallbackPath");
                 });
             }
             
