@@ -54,6 +54,18 @@ namespace Jp.UI.SSO.Configuration
                         };
                     });
             }
+            if (configuration.GetSection("ExternalLogin:AzureAD").Exists())
+            {
+                authBuilder.AddOpenIdConnect("AzureAD", "AzureAD", options =>
+                {
+                    
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                    options.ClientId = configuration.GetValue<string>("ExternalLogin:AzureAD:ClientId");
+                    options.Authority = configuration.GetValue<string>("ExternalLogin:AzureAD:Authority");
+                    options.MetadataAddress = configuration.GetValue<string>("ExternalLogin:AzureAD:MetadataAddress");
+                });
+            }
+            
 
             return services;
         }

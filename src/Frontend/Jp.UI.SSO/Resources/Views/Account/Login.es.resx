@@ -54,4 +54,7 @@
   <data name="Title-Username" xml:space="preserve">
     <value>Nombre de usuario</value>
   </data>
+  <data name="Body-AzureAD" xml:space="preserve">
+    <value>AzureAD</value>
+  </data>
 </root>

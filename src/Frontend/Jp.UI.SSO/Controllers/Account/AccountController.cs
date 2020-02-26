@@ -631,6 +631,10 @@ namespace Jp.UI.SSO.Controllers.Account
             {
                 filtered.Add(new Claim(JwtClaimTypes.Email, email));
             }
+            else //Azure Active Directory provides email in a verified_primary_email claim.
+            {
+                email = claims.FirstOrDefault(x => x.Type == "verified_primary_email")?.Value ?? claims.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+            }
 
             //picture
             var picture = claims.FirstOrDefault(x => x.Type == JwtClaimTypes.Picture)?.Value ?? claims.FirstOrDefault(x => x.Type == "image")?.Value;

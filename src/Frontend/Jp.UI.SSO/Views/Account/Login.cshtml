@@ -132,6 +132,16 @@
                                         <span>@Localizer["Body-Facebook"]</span>
                                     </a>
                                 }
+                                @if (Model.VisibleExternalProviders.Any(a => a.DisplayName.ToLower() == "azuread"))
+                                {
+                                    <a class="btn btn-brand btn-openid"
+                                       asp-action="ExternalLogin"
+                                       asp-route-provider="AzureAD"
+                                       asp-route-returnUrl="@Model.ReturnUrl">
+                                        <i class="fa fa-openid"></i>
+                                        <span>@Localizer["Body-AzureAD"]</span>
+                                    </a>
+                                }
                             </p>
                         }
                     </div>
