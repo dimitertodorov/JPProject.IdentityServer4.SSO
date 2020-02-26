@@ -142,7 +142,7 @@
   </data>
   <data name="Body-Document" xml:space="preserve">
     <value>IdentityServer publishes a
-                            &lt;a href="~/.well-known/openid-configuration"&gt;discovery document&lt;/a&gt;
+                            &lt;a href=".well-known/openid-configuration"&gt;discovery document&lt;/a&gt;
                             where you can find metadata and links to all the endpoints, key material, etc.</value>
   </data>
   <data name="Body-Here" xml:space="preserve">

@@ -29,38 +29,13 @@
         </ol>
     }
 }
-<div class="row">
-
-    <div class="col-lg-12 bg-primary">
-        <div class="row justify-content-center">
-            <div class="jumbotron bg-primary text-white">
-                <div class="col-md-12 order-md-1 text-center text-md-left">
-                    @Localizer["Body-Jp-Description"]
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-12 bg-cyan">
-        <div class="row justify-content-center">
-            <div class="jumbotron bg-cyan text-white">
-                @Localizer["Body-Welcome"]
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid" id="live-preview">
     <div class="animated fadeIn">
-        <div class="text-center">
-            <br />
-            <h1 class="section-heading mb-4">@Localizer["Body-Demo"]</h1>
-        </div>
+        
         <div class="row justify-content-center">
             <div class="col-md-4 col-sm-4">
                 <div class="card">
-                    <a asp-action="Index" asp-controller="Grants">
-                        <img class="card-img-top" src="@Url.Content("~/images/demos/sso.png")" alt="SSO">
-                    </a>
                     <div class="card-body text-center">
                         <div class="text-muted small text-uppercase font-weight-bold">@Localizer["Body-SSO"]</div>
                         <img class="icon" src="@Url.Content("~/icon.jpg")">
@@ -77,9 +52,6 @@
 
             <div class="col-md-4 col-sm-4">
                 <div class="card">
-                    <a href="@Configuration.GetSection("ApplicationSettings:IS4AdminUi").Value" target="_blank">
-                        <img class="card-img-top" src="@Url.Content("~/images/demos/adminui.png")" alt="Admin UI">
-                    </a>
                     <div class="card-body text-center">
                         <h2>IS4 Admin UI</h2>
                         <a href="@Configuration.GetSection("ApplicationSettings:IS4AdminUi").Value">
@@ -103,9 +75,6 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="card">
-                    <a href="@Configuration.GetSection("ApplicationSettings:UserManagementURL").Value" target="_blank">
-                        <img class="card-img-top" src="@Url.Content("~/images/demos/usermanagement.png")" alt="User Management">
-                    </a>
                     <div class="card-body text-center">
                         <div class="text-muted small text-uppercase font-weight-bold">@Localizer["Body-UserManagement"]</div>
                         <a href="@Configuration.GetSection("ApplicationSettings:UserManagementURL").Value">
